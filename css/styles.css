@@ -24,12 +24,15 @@ a{color:var(--accent);text-decoration:none}
 a:hover{color:var(--accent-ink)}
 
 /* Responsive gutter: always keep side padding */
-.container{
-  width:100%;
-  max-width:1080px;
-  margin:0 auto;
-  padding-inline: clamp(16px, 4vw, 24px);
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  /* Always at least 16px of gutter on each side */
+  padding-left: max(20px, 4vw);
+  padding-right: max(20px, 4vw);
 }
+
 
 /* Header */
 .site-header{position:sticky;top:0;z-index:10;background:rgba(16,18,21,0.75);backdrop-filter:blur(6px);border-bottom:1px solid #232831}
@@ -79,6 +82,36 @@ audio{width:100%;border-radius:8px;outline:none}
 .list li{margin:4px 0}
 .subhead{font-weight:600;margin-bottom:6px}
 .studio-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.training-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.training-grid h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.training-item {
+  background: var(--panel);
+  border: 1px solid #232831;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.trainer {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.training-note {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+
 
 /* Contact + Resume bottom */
 .contact-section{padding-top:28px}
